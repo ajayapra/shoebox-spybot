@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/aj/shoebox-spybot/catkin_ws/devel/setup.sh
