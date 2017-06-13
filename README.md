@@ -19,6 +19,7 @@ A RaspberryPi + Arduino based spybot
   - As initially suspected, ROS_IP was being set blank, and this caused problems
   - Easily fixed, by replacing *wlan0* in the shellscript with *wlp2s0*
   - All of today's code resides in the *teleop_test* package
+  - Made a *teleop_final* node which is a modified fork of *key_teleop* from the official *ros-kinetic-teleop-tools* 
 
 - **06/14/17**
   - Connected the camera to Raspberry Pi. Bad framerate. Trying to get 10 fps @ 320x240.
