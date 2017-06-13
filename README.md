@@ -21,7 +21,8 @@ A RaspberryPi + Arduino based spybot
   - All of today's code resides in the *teleop_test* package
 
 - **06/14/17**
-  - Connected the camera to Raspberry Pi. Working on getting ffserver to work. Bad framerate. Trying to get 10 fps @ 320x240
+  - Connected the camera to Raspberry Pi. Bad framerate. Trying to get 10 fps @ 320x240.
+  - Default *cheese* configurations wont work. Set resolution manually from preferences.
   - Stumbled upon another interesting detail, UBUNTU MATE's spftware update utility is bugged
   - To update software on the Raspberry pi run *sudo apt update && sudo apt upgrade* and *sudo rpi-update*
-  - Creating a shellscript for ffserver, so that the video feed can be accessed via browser from anywhere
+  - Creating a shellscript for *ffserver*, so that the video feed can be accessed via browser from anywhere
