@@ -19,3 +19,9 @@ A RaspberryPi + Arduino based spybot
   - As initially suspected, ROS_IP was being set blank, and this caused problems
   - Easily fixed, by replacing *wlan0* in the shellscript with *wlp2s0*
   - All of today's code resides in the *teleop_test* package
+
+- **06/14/17**
+  - Connected the camera to Raspberry Pi. Working on getting ffserver to work.
+  - Stumbled upon another interesting detail, UBUNTU MATE's spftware update utility is bugged
+  - To update software on the Raspberry pi run *sudo apt update && sudo apt upgrade* and *sudo rpi-update*
+  - Creating a shellscript for ffserver, so that the video feed can be accessed via browser from anywhere
