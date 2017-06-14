@@ -27,3 +27,10 @@ A RaspberryPi + Arduino based spybot
   - Stumbled upon another interesting detail, UBUNTU MATE's spftware update utility is bugged
   - To update software on the Raspberry pi run *sudo apt update && sudo apt upgrade* and *sudo rpi-update*
   - Creating a shellscript for *ffserver*, so that the video feed can be accessed via browser from anywhere
+
+- **06/15/17**
+  - Built ffmpeg from scratch following instructions found [here](https://ubuntu-mate.community/t/tutorial-build-or-download-ffmpeg-libavcodec-with-mmal-support-hardware-acceleration-video-decoding/3565). Not required, but oh well, maybe it'll speed things up! NOTE: Takes time!! Binge watch all the things!!
+  - Had a persistent error with libavutil.so.55, with the file disappearing/not being recognized.
+  - Fixed by *sudo apt-get install libavutil\** and by looking at the error path shown (*/usr/lib* in this case) and pasting the files there.
+  - Tried a lot of configs for ffserver, and finally found one that works. 15 fps video stream achieved
+  - Today's knowledge is contained within this [README](https://github.com/ajayapra/shoebox-spybot/blob/master/catkin_ws/src/ffmpeg_files/README) file.
