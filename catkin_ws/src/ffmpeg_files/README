@@ -10,3 +10,15 @@ P.S The default ffserver config settings are in...you guessed it...ffserver_defa
 
 This URL has lots of info
 https://www.ffmpeg.org/ffserver.html
+
+
+_____________________________________________
+For auto run
+
+In order to run ffmpeg service without typing command 
+
+/usr/sbin/webcam.sh
+
+Go to /etc/rc.local -> then add command line /usr/sbin/webcam.sh before "exit 0"
+
+Useful trick, could be used to launch roscore as well
