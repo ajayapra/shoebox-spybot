@@ -1,0 +1,12 @@
+1) Move ffserver.conf to /etc as sudo
+
+2) Run ffserver_start.sh
+
+3) Go to this URL to view video stream
+
+http://pi-desktop:8090/test.mjpg
+
+P.S The default ffserver config settings are in...you guessed it...ffserver_default.conf. Yay!...I guess~
+
+This URL has lots of info
+https://www.ffmpeg.org/ffserver.html
