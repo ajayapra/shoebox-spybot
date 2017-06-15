@@ -2,6 +2,7 @@
 A RaspberryPi + Arduino based spybot
 ## Useful links
   - [ROS + UBUNTU MATE](http://www.german-robot.com/2016/05/26/raspberry-pi-sd-card-image/)
+  - [RUFUS, for burning img/iso files and creating bootable disks](https://rufus.akeo.ie/)
   - [Ubuntu GNOME](https://wiki.ubuntu.com/UbuntuGNOME/GetUbuntuGNOME)
   - [Install UBUNTU on USB](http://ubuntuhandbook.org/index.php/2014/11/install-real-ubuntu-os-usb-drive/)
   - [HowTo: Configure VNC on RasPi](https://www.realvnc.com/docs/raspberry-pi.html#raspberry-pi-ssh)
