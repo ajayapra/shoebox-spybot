@@ -54,4 +54,10 @@ A RaspberryPi + Arduino based spybot
   - Created Arduino workspace
   - Lesson Learned: Do not delete the Arduino folder used to install the IDE. The IDE does not copy itelf over, instead it runs out of this folder itself.
   - PROTIP: Change the name of the folder and copy it somewhere else from *~/Downloads*, making updating easier, and so that its not deleted by accident.
+  - Redirect Arduino sketchbook folder from preferences to */home/$USER/shoebox-spybot/arduino_ws*
   - Add user to the dialout group to enable serial write on the arduino permanently `sudo usermod -a -G dialout $USER`
+  - Installed `rosserial_arduino` following instructions above
+  - Finished the bot_driver Arduino code.
+  - Need to run `rosrun rosserial_python serial_node.py /dev/ttyACM0 _baud:=57600` to start transmitting to Arduino
+  - Burn the [*bot_driver.ino*](https://github.com/ajayapra/shoebox-spybot/blob/master/arduino_ws/bot_driver/bot_driver.ino) sketch to start driving the bot around
+  - Rinse-Repeat these steps on the RasPy
