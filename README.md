@@ -10,7 +10,7 @@ A RaspberryPi + Arduino based spybot
 
 # Progress log
 - **06/12/17**: 
-  - Installed UBUNTU MATE + ROS on the Raspberry. 
+  - Installed UBUNTU MATE + ROS on the Raspberry.
   - Reinstalled UBUNTU GNOME 16.04 and ROS on the laptop. 
   - Configured VNC. 
   - Made this repository. 
@@ -52,4 +52,4 @@ A RaspberryPi + Arduino based spybot
   - Check port permissions using `ls -la /dev/tyACM0`
   - Created Arduino workspace
   - Lesson Learned: Do not delete the Arduino folder used to install the IDE. The IDE does not copy itelf over, instead it runs out of this folder itself.
-  - PROTIP: Change the name of the folder and copy it somewhere else from *Downloads*, making updating easier, and so hat its not deleted by accident.
+  - PROTIP: Change the name of the folder and copy it somewhere else from *~/Downloads*, making updating easier, and so that its not deleted by accident.
