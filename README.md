@@ -51,3 +51,5 @@ A RaspberryPi + Arduino based spybot
   - Run `sudo chmod +777 /dev/ttyACM0` on whichever port the Arduino is connected to, to enable code burning.
   - Check port permissions using `ls -la /dev/tyACM0`
   - Created Arduino workspace
+  - Lesson Learned: Do not delete the Arduino folder used to install the IDE. The IDE does not copy itelf over, instead it runs out of this folder itself.
+  - PROTIP: Change the name of the folder and copy it somewhere else from *Downloads*, making updating easier, and so hat its not deleted by accident.
