@@ -45,5 +45,5 @@ A RaspberryPi + Arduino based spybot
   - Started work on the Arduino.
   - Arduino IDE from *Software* (snap app) did not work.
   - Downloaded and installed Arduino IDE following instructions [here](https://www.arduino.cc/en/Guide/Linux)
-  - `install.sh` did not work, use this file instead. Add `--novendor` option to all the `xdg` commands to prevent errors
-  - Run `sudo chmod +777 /dev/ttyACM0` or whichever port the Arduino is coneected to, to enable code burning.
+  - `install.sh` did not work, use [this](https://github.com/ajayapra/shoebox-spybot/blob/master/catkin_ws/src/arduino_installer/install.sh) file instead. Add `--novendor` option to all the `xdg` commands to prevent errors
+  - Run `sudo chmod +777 /dev/ttyACM0` on whichever port the Arduino is connected to, to enable code burning.
