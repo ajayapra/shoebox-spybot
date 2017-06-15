@@ -53,3 +53,4 @@ A RaspberryPi + Arduino based spybot
   - Created Arduino workspace
   - Lesson Learned: Do not delete the Arduino folder used to install the IDE. The IDE does not copy itelf over, instead it runs out of this folder itself.
   - PROTIP: Change the name of the folder and copy it somewhere else from *~/Downloads*, making updating easier, and so that its not deleted by accident.
+  - Add user to the dialout group to enable serial write on the arduino permanently `sudo usermod -a -G dialout $USER`
