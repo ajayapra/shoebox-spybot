@@ -7,6 +7,7 @@ A RaspberryPi + Arduino based spybot
   - [Install UBUNTU on USB](http://ubuntuhandbook.org/index.php/2014/11/install-real-ubuntu-os-usb-drive/)
   - [HowTo: Configure VNC on RasPi](https://www.realvnc.com/docs/raspberry-pi.html#raspberry-pi-ssh)
   - [HowTo: Install Arduino on Ubuntu](https://www.arduino.cc/en/Guide/Linux)
+  - [`rosserial_arduino`: Interface Arduino with ROS](http://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup)
 
 # Progress log
 - **06/12/17**: 
