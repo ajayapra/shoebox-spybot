@@ -1,0 +1,4 @@
+<launch>
+  <node name="communicator" pkg="rosserial_python" type="serial_node.py" args="/dev/ttyACM0 _baud:=57600" respawn="true" />
+  <node name="keyboard_control" pkg="teleop_test" type="teleop_final.py" respawn="false" output="screen"/>
+</launch>

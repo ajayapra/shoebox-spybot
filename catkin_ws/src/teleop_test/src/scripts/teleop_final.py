@@ -12,6 +12,7 @@ import math
 
 import rospy
 from geometry_msgs.msg import Twist
+from std_msgs.msg import Int8
 
 class Velocity(object):
 
@@ -179,8 +180,8 @@ class SimpleKeyTeleop():
     def __init__(self, interface):
         self._interface = interface
         #Set topic to publish to here
-        self._pub_cmd = rospy.Publisher('/turtle1/cmd_vel', Twist)
-
+        self._pub_cmd = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
+        self._servo_cmd = rospy.Publisher('/servo_cmd', Int8, queue_size=10)
         self._hz = rospy.get_param('~hz', 10)
 
         self._forward_rate = rospy.get_param('~forward_rate', 0.8)
@@ -202,7 +203,7 @@ class SimpleKeyTeleop():
         self._man_running = True
         #Placeholder variables to switch to servo or auto operation
         self._auto_run = False
-        self._servo = False
+        self._servo = 0
         while self._man_running:
             while True:
                 keycode = self._interface.read_key()
@@ -253,6 +254,10 @@ class SimpleKeyTeleop():
             pass
         elif keycode == ord('a') or keycode == ord('d'):
             #SERVO: Servo motor for camera
+            if keycode == ord('a'):
+                self._servo = -1
+            else :
+                self._servo = 1
             rospy.loginfo('Exploring')
             pass
         elif keycode in self.movement_bindings:
@@ -260,12 +265,16 @@ class SimpleKeyTeleop():
 
     def _publish(self):
         self._interface.clear()
-        self._interface.write_line(2, 'Linear: %f, Angular: %f' % (self._linear, self._angular))
+        self._interface.write_line(2, 'Linear: %f, Angular: %f, Servo: %f' % (self._linear, self._angular, self._servo))
         self._interface.write_line(5, 'Use arrow keys to move, q to exit.')
         self._interface.refresh()
 
-        twist = self._get_twist(self._linear, self._angular)
+        twist = self._get_twist(self._linear, self._angular) #Makes a twist variable out of these two
+        servo_pub = Int8()
+        servo_pub = self._servo
         self._pub_cmd.publish(twist)
+        self._servo_cmd.publish(servo_pub)
+        self._servo = 0
 
 
 def main(stdscr):

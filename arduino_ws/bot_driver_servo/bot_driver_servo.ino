@@ -12,7 +12,7 @@ int right_drive = 0;
  Servo myservo;
  int servo_ang = 90.0;
  int servo_ang_old = servo_ang;
- int servo_pin = 3;
+ int servo_pin = 1;
 
 //H bridge stuff
  //These two pins provide the PWM inputs
@@ -91,6 +91,9 @@ void setup() {
 }
 
 void updateMot(int left, int right) {
+  if (myservo.attached()){
+    myservo.detach();
+  }
   //Set left and right to the same value to move forward
   // -100 <= (left/right) <= 100
   //Controls the L298N module direction and scales the outputs to be full range
@@ -115,17 +118,18 @@ void updateMot(int left, int right) {
   right = constrain(abs(right),0,100);
   left = map(left,0,100,0,255);
   right = map(right,0,100,0,255);
-//
-//  if(servo_ang_old != servo_ang){
-//    myservo.attach(servo_pin);
-//    myservo.write(servo_ang);
-//    myservo.detach();
-//    servo_ang_old = servo_ang;
-//  }
 
   //PWM output
   analogWrite(enB,left);
   analogWrite(enA,right);
+
+  if(servo_ang_old != servo_ang){
+    myservo.attach(servo_pin);
+    myservo.write(servo_ang);
+    myservo.detach();
+    servo_ang_old = servo_ang;
+  }
+
 }
 
 void loop() {
