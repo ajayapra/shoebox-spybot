@@ -1,2 +1,2 @@
-/home/$USER/shoebox-spybot/catkin_ws/src/ffmpeg_files/ffserver_start.sh
+/home/$USER/shoebox-spybot/catkin_ws/src/ffmpeg_files/ffserver_start.sh &
 roslaunch teleop_test comm.launch
