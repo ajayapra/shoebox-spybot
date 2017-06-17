@@ -89,18 +89,18 @@ class KeyTeleop():
 
         self._hz = rospy.get_param('~hz', 10)
 
-        self._num_steps = rospy.get_param('~turbo/steps', 200)
+        self._num_steps = rospy.get_param('~turbo/steps', 4)
 
-        forward_min = rospy.get_param('~turbo/linear_forward_min', 0.5)
-        forward_max = rospy.get_param('~turbo/linear_forward_max', 1.0)
+        forward_min = rospy.get_param('~turbo/linear_forward_min', 0.25)
+        forward_max = rospy.get_param('~turbo/linear_forward_max', 0.5)
         self._forward = Velocity(forward_min, forward_max, self._num_steps)
 
-        backward_min = rospy.get_param('~turbo/linear_backward_min', 0.25)
-        backward_max = rospy.get_param('~turbo/linear_backward_max', 0.5)
+        backward_min = rospy.get_param('~turbo/linear_backward_min', 0.125)
+        backward_max = rospy.get_param('~turbo/linear_backward_max', 0.25)
         self._backward = Velocity(backward_min, backward_max, self._num_steps)
 
-        angular_min = rospy.get_param('~turbo/angular_min', 0.7)
-        angular_max = rospy.get_param('~turbo/angular_max', 1.2)
+        angular_min = rospy.get_param('~turbo/angular_min', 0.3)
+        angular_max = rospy.get_param('~turbo/angular_max', 0.6)
         self._rotation = Velocity(angular_min, angular_max, self._num_steps)
 
     def run(self):
