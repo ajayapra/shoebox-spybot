@@ -1,0 +1,2 @@
+/home/$USER/shoebox-spybot/catkin_ws/src/Bash/remote_raspi.sh
+rosrun teleop_test teleop_final.py
