@@ -1,5 +1,6 @@
 # shoebox-spybot
 A RaspberryPi + Arduino based spybot
+![picture](https://raw.githubusercontent.com/ajayapra/shoebox-spybot/master/shoebox-spybot.jpg "Shoebox Spybot!!")
 ## Useful links
   - [ROS + UBUNTU MATE](http://www.german-robot.com/2016/05/26/raspberry-pi-sd-card-image/)
   - [RUFUS, for burning img/iso files and creating bootable disks](https://rufus.akeo.ie/)
