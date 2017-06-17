@@ -66,7 +66,7 @@ A RaspberryPi + Arduino based spybot
    - Last day of the self-set one week deadline for this build.
    - Made `comm.launch`, that'll help launch `rosserial_python`
    - Made `teleop.launch`, to launch the teleop node
-   - TIP: add `output=screen` to the XML tage of the node you wante displayed in the foreground
+   - TIP: add `output=screen` to the XML tag of the node you want displayed in the foreground
    - Created custom shell commands `robot`, `robot-cam`, and `robot-remote` to make it easier to launch the program via CLI
    - Add `export PATH=$PATH:~/bin` to *~/.bashrc* to use these custom shell commands from the terminal
    - Run `./catkin_ws/Bash/execme.sh` to create copies of the custom shell commands in *~/bin* folder
