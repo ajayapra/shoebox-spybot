@@ -1,2 +1,9 @@
+#How this works
+#Fist it starts the camera feed, the & makes it a background process with
+#output redirected to /dev/null (i.e nothing, no output)
+#Then the ROS node runs in the foreground
+
 /home/$USER/shoebox-spybot/catkin_ws/src/ffmpeg_files/ffserver_start.sh &>/dev/null &
 roslaunch teleop_test teleop.launch
+
+/home/$USER/shoebox-spybot/catkin_ws/src/ffmpeg_files/ffserver_stop.sh

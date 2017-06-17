@@ -89,7 +89,7 @@ class KeyTeleop():
 
         self._hz = rospy.get_param('~hz', 10)
 
-        self._num_steps = rospy.get_param('~turbo/steps', 4)
+        self._num_steps = rospy.get_param('~turbo/steps', 200)
 
         forward_min = rospy.get_param('~turbo/linear_forward_min', 0.5)
         forward_max = rospy.get_param('~turbo/linear_forward_max', 1.0)
