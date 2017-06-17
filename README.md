@@ -43,7 +43,7 @@ A RaspberryPi + Arduino based spybot
   - Tried a lot of configs for ffserver, and finally found one that works. 15 fps video stream achieved
   - Today's knowledge is contained within this [README](https://github.com/ajayapra/shoebox-spybot/blob/master/catkin_ws/src/ffmpeg_files/README) file.
   
-- **06/13/17**
+- **06/16/17**
   - Started work on the Arduino.
   - Arduino IDE from *Software* (snap app) did not work.
   - Downloaded and installed Arduino IDE following instructions [here](https://www.arduino.cc/en/Guide/Linux)
@@ -60,4 +60,21 @@ A RaspberryPi + Arduino based spybot
   - Finished the bot_driver Arduino code.
   - Need to run `rosrun rosserial_python serial_node.py /dev/ttyACM0 _baud:=57600` to start transmitting to Arduino
   - Burn the [*bot_driver.ino*](https://github.com/ajayapra/shoebox-spybot/blob/master/arduino_ws/bot_driver/bot_driver.ino) sketch to start driving the bot around
-  - Rinse-Repeat these steps on the RasPy
+  - Rinse-Repeat these steps on the RasPi
+ 
+ - **06/16/17**
+   - Last day of the self-set one week deadline for this build.
+   - Made `comm.launch`, that'll help launch `rosserial_python`
+   - Made `teleop.launch`, to launch the teleop node
+   - TIP: add `output=screen` to the XML tage of the node you wante displayed in the foreground
+   - Created custom shell commands `robot`, `robot-cam`, and `robot-remote` to make it easier to launch the program via CLI
+   - Add `export PATH=$PATH:~/bin` to *~/.bashrc* to use these custom shell commands from the terminal
+   - Run `./catkin_ws/Bash/execme.sh` to create copies of the custom shell commands in *~/bin* folder
+   - Documentation on how these commands work found [here](https://github.com/ajayapra/shoebox-spybot/blob/master/catkin_ws/src/Bash/robot)
+   - OPTIONAL: This is how you set a default login for the CLI interface:
+     - `sudo pluma etc/systemd/system/getty.target.wants/getty@tty1.service`.
+     - Under `[Service]` , Find line that says `ExecStart=-/sbin/agetty --noclear %I $TERM`.
+     - Change it to `ExecStart=-/sbin/agetty --noclear -a <user> %I $TERM` where `<user>` is your username.
+     - Reboot and CLI should autologin to `<user>`.
+     - Useful if you just want to execute the commands without a screen and want the robot moving.
+   - That marks the end of the initial stage of this project. Will be including OpenCV image processing stuff next week.
