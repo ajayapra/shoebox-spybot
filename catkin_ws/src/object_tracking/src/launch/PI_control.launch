@@ -1,0 +1,13 @@
+<launch>
+  <node name="P_control" pkg="object_tracking" type="PI_tracker.py" output="screen" >
+    <param name="ref_pos" value="320.0" />
+    <param name="P_ang" value="0.004" />
+    <param name="ref_size" value="60.0" />
+    <param name="P_lin" value="0.025" />
+    <param name="P_lin_hist" value="2" />
+    <param name="P_lin_sat" value="0.7" />
+    <param name="P_ang_hist" value="25" />
+    <param name="P_ang_sat" value="0.7" />
+  </node>
+
+</launch>

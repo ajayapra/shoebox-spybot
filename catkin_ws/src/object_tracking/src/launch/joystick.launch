@@ -1,0 +1,25 @@
+<launch>
+
+  <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="screen" >
+    <param name="video_device" value="/dev/video0" />
+    <param name="image_width" value="640" />
+    <param name="image_height" value="480" />
+    <param name="pixel_format" value="yuyv" />
+    <param name="camera_frame_id" value="usb_cam" />
+    <param name="io_method" value="mmap"/>
+  </node>
+
+  <node pkg="object_tracking" name="joy_start"  type="joy_start.py" output="screen" required="true" />
+
+  <node name="P_control" pkg="object_tracking" type="PI_tracker.py" output="screen" >
+    <param name="ref_pos" value="320.0" />
+    <param name="P_ang" value="0.004" />
+    <param name="ref_size" value="60.0" />
+    <param name="P_lin" value="0.025" />
+    <param name="P_lin_hist" value="2" />
+    <param name="P_lin_sat" value="0.7" />
+    <param name="P_ang_hist" value="25" />
+    <param name="P_ang_sat" value="0.7" />
+  </node>
+
+</launch>
