@@ -3,4 +3,4 @@
 #output redirected to /dev/null (i.e nothing, no output)
 #Then the ROS node runs in the foreground
 
-roslaunch object_tracking object_tracking.launch
+roslaunch object_tracking joystick.launch
