@@ -79,3 +79,7 @@ A RaspberryPi + Arduino based spybot
      - Reboot and CLI should autologin to `<user>`.
      - Useful if you just want to execute the commands without a screen and want the robot moving.
    - That marks the end of the initial stage of this project. Will be including OpenCV image processing stuff next week.
+       
+- **06/17/17**
+  - Cloned and modified object tracking algorithm from a [previous project](https://github.com/amkurup/object_trcaking)
+  - To change keyboard layouts (since the UBUNTU+ROS image comes with all kinds of German settings) run `sudo dpkg-reconfigure keyboard-configuration`
