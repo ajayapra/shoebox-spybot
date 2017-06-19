@@ -1,4 +1,4 @@
 <launch>
   <include file="$(find teleop_test)/src/launch/comm.launch"/>
-  <node name="keyboard_control" pkg="teleop_test" type="teleop_final.py" output="screen"/>
+  <node name="keyboard_control" pkg="teleop_test" type="teleop_final.py" output="screen" required="true"/>
 </launch>
