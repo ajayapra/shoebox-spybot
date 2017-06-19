@@ -10,7 +10,14 @@ A RaspberryPi + Arduino based spybot
   - [HowTo: Install Arduino on Ubuntu](https://www.arduino.cc/en/Guide/Linux)
   - [`rosserial_arduino`: Interface Arduino with ROS](http://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup)
 
-# Progress log
+## Commands
+  - `robot`: Starts the camera feed and keyboard control on the bot. View the feed at http://pi-desktop:8090/test.mjpg once you've configured `pi-desktop` in */etc/hosts*. Press `q` to exit.
+  - `robot-cam`: Starts only the camera feed and the serial comm nodes. To be used in combination with `robot-remote` and after opening an SSH connection to `pi-desktop` to control and move the robot from another computer
+  - `robot-remote`: Starts the control node, and sets the ROS IP to the Raspberry Pi on the remote computer
+  - `robot-force`: Enables object tracking "force-mode" on the robot. Press `v` to pause, and `q` to quit.
+  - `execme.sh` : Script that copies all these custom commands to *~/bin* and adds the path to the executable paths.
+  
+## Progress log
 - **06/12/17**: 
   - Installed UBUNTU MATE + ROS on the Raspberry.
   - Reinstalled UBUNTU GNOME 16.04 and ROS on the laptop. 
