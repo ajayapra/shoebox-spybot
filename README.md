@@ -83,3 +83,4 @@ A RaspberryPi + Arduino based spybot
 - **06/17/17**
   - Cloned and modified object tracking algorithm from a [previous project](https://github.com/amkurup/object_trcaking)
   - To change keyboard layouts (since the UBUNTU+ROS image comes with all kinds of German settings) run `sudo dpkg-reconfigure keyboard-configuration`
+  - Created a control node, which can be called by the command `robot-force`, Tracking can then be enabled/disabled by pressing `v`. Press `q` ro quit
