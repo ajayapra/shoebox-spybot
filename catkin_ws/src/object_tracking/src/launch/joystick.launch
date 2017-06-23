@@ -23,4 +23,7 @@
     <param name="P_ang_sat" value="0.7" />
   </node>
 
+  <node name="topic_throttle" pkg="topic_tools" type="throttle" args="messages /cmd_vel 10.0 /turtle1/cmd_vel"/>
+
 </launch>
+

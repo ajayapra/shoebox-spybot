@@ -1,5 +1,5 @@
 <launch>
-  <node name="P_control" pkg="object_tracking" type="PI_tracker.py" output="screen" >
+  <node name="P_control" pkg="object_tracking" type="PI_tracker.py" >
     <param name="ref_pos" value="320.0" />
     <param name="P_ang" value="0.004" />
     <param name="ref_size" value="60.0" />

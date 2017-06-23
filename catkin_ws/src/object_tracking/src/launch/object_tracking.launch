@@ -1,5 +1,5 @@
 <launch>
-  <include file="$(find teleop_test)/src/launch/comm.launch"/>
+  <!-- <include file="$(find teleop_test)/src/launch/comm.launch"/> -->
 
   <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="screen" >
     <param name="video_device" value="/dev/video0" />
@@ -11,16 +11,9 @@
   </node>
 
   <node name="auto" pkg="object_tracking" type="tracker_proto.py" required="true" />
-  
-  <node name="P_control" pkg="object_tracking" type="PI_tracker.py" output="screen" >
-    <param name="ref_pos" value="320.0" />
-    <param name="P_ang" value="0.004" />
-    <param name="ref_size" value="60.0" />
-    <param name="P_lin" value="0.025" />
-    <param name="P_lin_hist" value="2" />
-    <param name="P_lin_sat" value="0.7" />
-    <param name="P_ang_hist" value="25" />
-    <param name="P_ang_sat" value="0.7" />
-  </node>
+
+  <include file="$(find object_tracking)/src/launch/PI_control.launch"/>  
+
+  <node name="topic_throttle" pkg="topic_tools" type="throttle" args="messages /cmd_vel 10.0 /turtle1/cmd_vel"/>
 
 </launch>

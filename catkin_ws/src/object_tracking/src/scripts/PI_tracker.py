@@ -65,7 +65,7 @@ class Controller:
         err_lin = ref_size - data.radius # <50 move forward, >70 move back
 
         # define publisher
-        pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
+        pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
         rospy.loginfo('ref_pos: %s ref_size: %s err_lin: %s err_ang: %s data.x: %s data.radius: %s', ref_pos, ref_size, err_lin, err_ang, data.x, data.radius)
 
         #Angular control hysterisis
